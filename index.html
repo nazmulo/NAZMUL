@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Portfolio — Full-Stack & AI Developer</title>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Syne:wght@400;600;700;800&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- Cursor -->
+<div id="cursor"></div>
+<div id="cursor-ring"></div>
+<div class="scanline"></div>
+
+<!-- Background Canvas -->
+<canvas id="bg-canvas"></canvas>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-logo">NAZMUL</div>
+  <div class="nav-links">
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#learning">Journey</a>
+    <a href="#contact">Contact</a>
+  </div>
+  <button class="open-btn" onclick="openPopup()">Hire Me</button>
+
+  </nav>
+  
+  <!-- HERO -->
+<section id="hero">
+  <div class="hero-grid">
+    <div class="hero-left">
+      <div class="hero-eyebrow">Available for opportunities</div>
+      <h1 class="hero-name">
+        <span class="line1">Full-Stack</span>
+        <span class="line2">Developer</span>
+      </h1>
+      <p class="hero-role">
+        Building <strong>scalable web systems</strong> with React, Next.js & Node.js —
+        on a focused path toward <strong>AI engineering</strong> and Python mastery.
+        Turning ideas into fast, elegant digital products.
+      </p>
+      <div class="hero-btns">
+        <a href="#projects" class="btn-primary">
+          <span>↗</span> View Projects
+        </a>
+        <a href="#contact" class="btn-ghost">
+          <span>✉</span> Contact Me
+        </a>
+      </div>
+    </div>
+
+    <div class="hero-right">
+      <div class="avatar-frame">
+        <div class="orbit-ring">
+          <div class="orbit-dot"></div>
+        </div>
+        <div class="orbit-ring r2">
+          <div class="orbit-dot lime"></div>
+        </div>
+        <div class="avatar-hex">
+          <svg viewBox="0 0 340 340" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <polygon points="170,10 320,95 320,245 170,330 20,245 20,95"
+              stroke="rgba(0,240,255,0.3)" stroke-width="1" fill="rgba(0,240,255,0.03)"/>
+            <polygon points="170,30 305,105 305,235 170,310 35,235 35,105"
+              stroke="rgba(168,255,62,0.15)" stroke-width="1" fill="none"/>
+          </svg>
+        </div>
+        <div class="avatar-inner">
+          <img src="my.jpg" height="300px" width="300" >
+        </div>
+
+        <div class="status-pill pill-1">
+          <div class="dot" style="background:#a8ff3e;box-shadow:0 0 6px #a8ff3e"></div>
+          <span style="color:#a8ff3e">React · Next.js</span>
+        </div>
+        <div class="status-pill pill-2">
+          <div class="dot" style="background:#00f0ff;box-shadow:0 0 6px #00f0ff"></div>
+          <span style="color:#00f0ff">Node · Express</span>
+        </div>
+        <div class="status-pill pill-3">
+          <div class="dot" style="background:#ff2d7a;box-shadow:0 0 6px #ff2d7a"></div>
+          <span style="color:#ff2d7a">MongoDB</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+  
+  
+<script src="big.js"></script>
+
+</body>
+</html>
