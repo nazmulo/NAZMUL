@@ -149,3 +149,42 @@ const counterObs = new IntersectionObserver(entries => {
   });
 }, { threshold: 0.5 });
 counters.forEach(c => counterObs.observe(c));
+
+//--popup
+
+function openPopup() {
+    document.getElementById('overlay').classList.add('active');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closePopup() {
+    document.getElementById('overlay').classList.remove('active');
+    document.body.style.overflow = '';
+    setTimeout(() => {
+      document.getElementById('form-content').style.display = 'block';
+      document.getElementById('success-msg').style.display = 'none';
+      document.getElementById('name').value = '';
+      document.getElementById('email').value = '';
+      document.getElementById('message').value = '';
+    }, 300);
+  }
+
+  function handleOverlayClick(e) {
+    if (e.target === document.getElementById('overlay')) closePopup();
+  }
+
+  function sendMessage() {
+    const name = document.getElementById('name').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const message = document.getElementById('message').value.trim();
+    if (!name || !email || !message) {
+      alert('Please fill in all fields.');
+      return;
+    }
+    document.getElementById('form-content').style.display = 'none';
+    document.getElementById('success-msg').style.display = 'block';
+  }
+
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape') closePopup();
+  });
